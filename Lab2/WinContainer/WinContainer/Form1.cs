@@ -33,5 +33,16 @@ namespace WinContainer
         {
             flowLayoutPanel1.SetFlowBreak(button6, true);
         }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            Button aButton = new Button();
+            tableLayoutPanel1.Controls.Add(aButton, 1, 1);
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
