@@ -341,6 +341,7 @@ namespace WinContainer
             this.button11.TabIndex = 1;
             this.button11.Text = "Fix/Unfix Splitter";
             this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // button12
             // 
@@ -350,6 +351,7 @@ namespace WinContainer
             this.button12.TabIndex = 0;
             this.button12.Text = "Collapse/Uncollapse Panel1";
             this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // Form1
             // 
