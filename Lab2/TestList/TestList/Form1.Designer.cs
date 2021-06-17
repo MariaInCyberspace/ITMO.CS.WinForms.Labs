@@ -35,6 +35,7 @@ namespace TestList
             this.buttonAdd = new System.Windows.Forms.Button();
             this.buttonDelete = new System.Windows.Forms.Button();
             this.buttonSort = new System.Windows.Forms.Button();
+            this.buttonDownloadData = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -98,11 +99,22 @@ namespace TestList
             this.buttonSort.UseVisualStyleBackColor = true;
             this.buttonSort.Click += new System.EventHandler(this.buttonSort_Click);
             // 
+            // buttonDownloadData
+            // 
+            this.buttonDownloadData.Location = new System.Drawing.Point(265, 190);
+            this.buttonDownloadData.Name = "buttonDownloadData";
+            this.buttonDownloadData.Size = new System.Drawing.Size(75, 23);
+            this.buttonDownloadData.TabIndex = 6;
+            this.buttonDownloadData.Text = "Загрузить данные";
+            this.buttonDownloadData.UseVisualStyleBackColor = true;
+            this.buttonDownloadData.Click += new System.EventHandler(this.buttonDownloadData_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(380, 257);
+            this.Controls.Add(this.buttonDownloadData);
             this.Controls.Add(this.buttonSort);
             this.Controls.Add(this.buttonDelete);
             this.Controls.Add(this.buttonAdd);
@@ -125,6 +137,7 @@ namespace TestList
         private System.Windows.Forms.Button buttonAdd;
         private System.Windows.Forms.Button buttonDelete;
         private System.Windows.Forms.Button buttonSort;
+        private System.Windows.Forms.Button buttonDownloadData;
     }
 }
 
