@@ -221,7 +221,7 @@ namespace BiblWorm
             0,
             0});
             this.numericUpDown4.Minimum = new decimal(new int[] {
-            7,
+            1,
             0,
             0,
             0});
@@ -229,7 +229,7 @@ namespace BiblWorm
             this.numericUpDown4.Size = new System.Drawing.Size(119, 20);
             this.numericUpDown4.TabIndex = 6;
             this.numericUpDown4.Value = new decimal(new int[] {
-            7,
+            1,
             0,
             0,
             0});
@@ -298,6 +298,7 @@ namespace BiblWorm
             this.button1.TabIndex = 1;
             this.button1.Text = "Добавить";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // richTextBox1
             // 
@@ -315,6 +316,7 @@ namespace BiblWorm
             this.button2.TabIndex = 2;
             this.button2.Text = "Просмотреть";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // checkBox3
             // 
@@ -338,6 +340,7 @@ namespace BiblWorm
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form1";
             this.Text = "Библиотека";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
