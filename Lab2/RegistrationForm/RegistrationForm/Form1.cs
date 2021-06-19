@@ -55,20 +55,9 @@ namespace RegistrationForm
             if (char.IsDigit(e.KeyChar))
             {
                 e.Handled = true;
-                MessageBox.Show("Поле Name не может содержать цифры");
+                errorProvider1.SetError(textBox1, "Must be letter");
             }
         }
-
-       /*
-        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true;
-                MessageBox.Show("Поле PIN не может содержать буквы");
-            }
-        }
-        */
 
         private void textBox2_Validating(object sender, CancelEventArgs e)
         {
