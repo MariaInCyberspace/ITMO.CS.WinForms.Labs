@@ -35,7 +35,8 @@ namespace RegistrationForm
                 txt.TabIndex = 1;
                 txt.Text = "";
                 groupBox1.Controls.Add(txt);
-            } 
+                txt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
+            }
             else
             {
                 int lcv;
@@ -45,6 +46,24 @@ namespace RegistrationForm
                     groupBox1.Controls.RemoveAt(lcv - 1);
                     lcv -= 1;
                 }
+            }
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+                MessageBox.Show("Поле Name не может содержать цифры");
+            }
+        }
+
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+                MessageBox.Show("Поле PIN не может содержать буквы");
             }
         }
     }
