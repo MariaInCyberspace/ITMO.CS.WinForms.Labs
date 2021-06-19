@@ -35,7 +35,8 @@ namespace RegistrationForm
                 txt.TabIndex = 1;
                 txt.Text = "";
                 groupBox1.Controls.Add(txt);
-                txt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
+                // txt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
+                // this.textBox2.Validating += new System.ComponentModel.CancelEventHandler(this.textBox2_Validating);
             }
             else
             {
@@ -58,12 +59,34 @@ namespace RegistrationForm
             }
         }
 
+       /*
         private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsDigit(e.KeyChar))
             {
                 e.Handled = true;
                 MessageBox.Show("Поле PIN не может содержать буквы");
+            }
+        }
+        */
+
+        private void textBox2_Validating(object sender, CancelEventArgs e)
+        {
+            if (textBox2.Text == "")
+            {
+                e.Cancel = false;
+            }
+            else
+            {
+                try
+                {
+                    double.Parse(textBox2.Text);
+                    e.Cancel = false;
+                } catch
+                {
+                    e.Cancel = true;
+                    MessageBox.Show("Поле PIN не может содержать буквы");
+                }
             }
         }
     }
