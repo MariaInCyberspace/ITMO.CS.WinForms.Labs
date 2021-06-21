@@ -73,6 +73,45 @@ namespace BiblWorm
             get { return (int)numericUpDown4.Value; }
             set { numericUpDown4.Value = value; }
         }
+
+        // Magazine 
+
+        public string MagTitle
+        {
+            get { return textBox4.Text; }
+            set { textBox4.Text = value; }
+        }
+
+        public string MagVolume
+        {
+            get { return textBox5.Text; }
+            set { textBox5.Text = value; }
+        }
+
+        public int MagNumber
+        {
+            get { return (int)numericUpDown8.Value; }
+            set { numericUpDown8.Value = value; }
+        }
+
+        public int MagYear
+        {
+            get { return (int)numericUpDown7.Value; }
+            set { numericUpDown7.Value = value; }
+        }
+
+        public int MagInvNumber
+        {
+            get { return (int)numericUpDown6.Value; }
+            set { numericUpDown6.Value = value; }
+        }
+
+        public bool MagExistence
+        {
+            get { return checkBox5.Checked; }
+            set { checkBox5.Checked = value; }
+        }
+
         public Form1()
         {
             InitializeComponent();
@@ -116,6 +155,28 @@ namespace BiblWorm
                 }
                 richTextBox1.Text = sb.ToString();
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Magazine mag = new Magazine(MagVolume, MagNumber, MagTitle, MagYear, MagInvNumber, MagExistence);
+            for (int i = 0; i < its.Count; i++)
+            {
+                if (mag.CompareTo(its[i]) == 0) 
+                {
+                    mag.Subs();
+                }
+            }
+            its.Add(mag);
+            MagVolume = MagTitle = "";
+            MagYear = 1900;
+            MagInvNumber = 0;
+            MagExistence = false;
+        }
+
+        private void tabPage2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

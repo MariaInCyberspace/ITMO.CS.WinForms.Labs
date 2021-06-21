@@ -58,7 +58,7 @@ namespace MyClass
    }
 
 
-   int IComparable.CompareTo(object obj)
+   public int CompareTo(object obj)
    {
        Item it = (Item)obj;
        if (this.invNumber == it.invNumber) return 0;

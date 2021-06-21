@@ -35,7 +35,10 @@ namespace MyClass
 
       public void Subs()
       {
-          // действия при оформлении подписки на журнал
+            // действия при оформлении подписки на журнал
+            IfSubs = true;
+            this.TakeItem();
+            this.ToString();
       }
 
 
