@@ -16,6 +16,7 @@ namespace MdiApplication
         public ParentForm()
         {
             InitializeComponent();
+            spData.Text = Convert.ToString(System.DateTime.Today.ToLongDateString());
         }
 
         private void ExitMenuItem_Click(object sender, EventArgs e)
@@ -38,6 +39,8 @@ namespace MdiApplication
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
+            int i = openDocuments - 1;
+            spWin.Text = "New window created: " + ++i;
 
         }
 
@@ -64,6 +67,16 @@ namespace MdiApplication
                     break;
 
             }
+        }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            spWin.Text = "Windows is cascade";
+        }
+
+        private void toolStripButton3_Click(object sender, EventArgs e)
+        {
+            spWin.Text = "Windows is horizontal";
         }
     }
 }
