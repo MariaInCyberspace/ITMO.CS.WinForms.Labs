@@ -12,6 +12,7 @@ namespace EditPerson
 {
     public partial class EditPersonForm : Form
     {
+        Person p;
         public string FirstName
         {
             get { return firstNameTextBox.Text; }
@@ -29,9 +30,27 @@ namespace EditPerson
             get { return (int)ageNumericUpDown.Value; }
             set { ageNumericUpDown.Value = value; }
         }
-        public EditPersonForm()
+
+        public EditPersonForm(Person p)
         {
             InitializeComponent();
+
+            this.p = p;
+            this.FirstName = p.FirstName;
+            this.LastName = p.LastName;
+            this.Age = p.Age;
+            MessageBox.Show("Сотрудник: " + p.ToString());
+        }
+        public EditPersonForm()
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            p.FirstName = this.FirstName;
+            p.LastName = this.LastName;
+            p.Age = this.Age;
         }
     }
 }
