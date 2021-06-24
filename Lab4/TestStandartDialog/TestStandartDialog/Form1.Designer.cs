@@ -39,6 +39,8 @@ namespace TestStandartDialog
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.FontToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fontDialog1 = new System.Windows.Forms.FontDialog();
+            this.OpenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,7 +58,8 @@ namespace TestStandartDialog
             // FileToolStripMenuItem
             // 
             this.FileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.SaveAsToolStripMenuItem});
+            this.SaveAsToolStripMenuItem,
+            this.OpenToolStripMenuItem});
             this.FileToolStripMenuItem.Name = "FileToolStripMenuItem";
             this.FileToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
             this.FileToolStripMenuItem.Text = "&Файл";
@@ -64,7 +67,7 @@ namespace TestStandartDialog
             // SaveAsToolStripMenuItem
             // 
             this.SaveAsToolStripMenuItem.Name = "SaveAsToolStripMenuItem";
-            this.SaveAsToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.SaveAsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.SaveAsToolStripMenuItem.Text = "&Сохранить как";
             this.SaveAsToolStripMenuItem.Click += new System.EventHandler(this.SaveAsToolStripMenuItem_Click);
             // 
@@ -100,6 +103,17 @@ namespace TestStandartDialog
             this.FontToolStripMenuItem.Text = "&Шрифт";
             this.FontToolStripMenuItem.Click += new System.EventHandler(this.FontToolStripMenuItem_Click);
             // 
+            // OpenToolStripMenuItem
+            // 
+            this.OpenToolStripMenuItem.Name = "OpenToolStripMenuItem";
+            this.OpenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.OpenToolStripMenuItem.Text = "&Открыть";
+            this.OpenToolStripMenuItem.Click += new System.EventHandler(this.OpenToolStripMenuItem_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -129,6 +143,8 @@ namespace TestStandartDialog
         private System.Windows.Forms.ColorDialog colorDialog1;
         private System.Windows.Forms.ToolStripMenuItem FontToolStripMenuItem;
         private System.Windows.Forms.FontDialog fontDialog1;
+        private System.Windows.Forms.ToolStripMenuItem OpenToolStripMenuItem;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }
 
