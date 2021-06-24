@@ -26,5 +26,13 @@ namespace TestStandartDialog
                 richTextBox1.SaveFile(saveFileDialog1.FileName, RichTextBoxStreamType.PlainText);
             }
         }
+
+        private void BackColorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (colorDialog1.ShowDialog() == DialogResult.OK)
+            {
+                richTextBox1.BackColor = colorDialog1.Color;
+            }
+        }
     }
 }

@@ -34,13 +34,17 @@ namespace TestStandartDialog
             this.SaveAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.FormatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.BackColorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.FileToolStripMenuItem});
+            this.FileToolStripMenuItem,
+            this.FormatToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -58,7 +62,7 @@ namespace TestStandartDialog
             // SaveAsToolStripMenuItem
             // 
             this.SaveAsToolStripMenuItem.Name = "SaveAsToolStripMenuItem";
-            this.SaveAsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.SaveAsToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.SaveAsToolStripMenuItem.Text = "&Сохранить как";
             this.SaveAsToolStripMenuItem.Click += new System.EventHandler(this.SaveAsToolStripMenuItem_Click);
             // 
@@ -70,6 +74,21 @@ namespace TestStandartDialog
             this.richTextBox1.Size = new System.Drawing.Size(800, 426);
             this.richTextBox1.TabIndex = 1;
             this.richTextBox1.Text = "";
+            // 
+            // FormatToolStripMenuItem
+            // 
+            this.FormatToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.BackColorToolStripMenuItem});
+            this.FormatToolStripMenuItem.Name = "FormatToolStripMenuItem";
+            this.FormatToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
+            this.FormatToolStripMenuItem.Text = "&Формат";
+            // 
+            // BackColorToolStripMenuItem
+            // 
+            this.BackColorToolStripMenuItem.Name = "BackColorToolStripMenuItem";
+            this.BackColorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.BackColorToolStripMenuItem.Text = "&Цвет фона";
+            this.BackColorToolStripMenuItem.Click += new System.EventHandler(this.BackColorToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -95,6 +114,9 @@ namespace TestStandartDialog
         private System.Windows.Forms.ToolStripMenuItem SaveAsToolStripMenuItem;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.ToolStripMenuItem FormatToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem BackColorToolStripMenuItem;
+        private System.Windows.Forms.ColorDialog colorDialog1;
     }
 }
 
