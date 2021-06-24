@@ -34,5 +34,13 @@ namespace TestStandartDialog
                 richTextBox1.BackColor = colorDialog1.Color;
             }
         }
+
+        private void FontToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (fontDialog1.ShowDialog() == DialogResult.OK)
+            {
+                richTextBox1.Font = fontDialog1.Font;
+            } 
+        }
     }
 }

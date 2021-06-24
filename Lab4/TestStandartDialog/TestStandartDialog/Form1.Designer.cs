@@ -37,6 +37,8 @@ namespace TestStandartDialog
             this.FormatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.BackColorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+            this.FontToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fontDialog1 = new System.Windows.Forms.FontDialog();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -78,7 +80,8 @@ namespace TestStandartDialog
             // FormatToolStripMenuItem
             // 
             this.FormatToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.BackColorToolStripMenuItem});
+            this.BackColorToolStripMenuItem,
+            this.FontToolStripMenuItem});
             this.FormatToolStripMenuItem.Name = "FormatToolStripMenuItem";
             this.FormatToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
             this.FormatToolStripMenuItem.Text = "&Формат";
@@ -89,6 +92,13 @@ namespace TestStandartDialog
             this.BackColorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.BackColorToolStripMenuItem.Text = "&Цвет фона";
             this.BackColorToolStripMenuItem.Click += new System.EventHandler(this.BackColorToolStripMenuItem_Click);
+            // 
+            // FontToolStripMenuItem
+            // 
+            this.FontToolStripMenuItem.Name = "FontToolStripMenuItem";
+            this.FontToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.FontToolStripMenuItem.Text = "&Шрифт";
+            this.FontToolStripMenuItem.Click += new System.EventHandler(this.FontToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -117,6 +127,8 @@ namespace TestStandartDialog
         private System.Windows.Forms.ToolStripMenuItem FormatToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem BackColorToolStripMenuItem;
         private System.Windows.Forms.ColorDialog colorDialog1;
+        private System.Windows.Forms.ToolStripMenuItem FontToolStripMenuItem;
+        private System.Windows.Forms.FontDialog fontDialog1;
     }
 }
 
