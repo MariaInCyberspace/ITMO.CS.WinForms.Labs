@@ -36,6 +36,7 @@ namespace WinAsynchMethod
             this.btnRun = new System.Windows.Forms.Button();
             this.btnWork = new System.Windows.Forms.Button();
             this.lblResult = new System.Windows.Forms.Label();
+            this.btnSubtract = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblA
@@ -99,11 +100,22 @@ namespace WinAsynchMethod
             this.lblResult.TabIndex = 6;
             this.lblResult.Text = "label1";
             // 
+            // btnSubtract
+            // 
+            this.btnSubtract.Location = new System.Drawing.Point(126, 69);
+            this.btnSubtract.Name = "btnSubtract";
+            this.btnSubtract.Size = new System.Drawing.Size(75, 23);
+            this.btnSubtract.TabIndex = 7;
+            this.btnSubtract.Text = "Разность";
+            this.btnSubtract.UseVisualStyleBackColor = true;
+            this.btnSubtract.Click += new System.EventHandler(this.btnSubtract_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(409, 161);
+            this.Controls.Add(this.btnSubtract);
             this.Controls.Add(this.lblResult);
             this.Controls.Add(this.btnWork);
             this.Controls.Add(this.btnRun);
@@ -127,6 +139,7 @@ namespace WinAsynchMethod
         private System.Windows.Forms.Button btnRun;
         private System.Windows.Forms.Button btnWork;
         private System.Windows.Forms.Label lblResult;
+        private System.Windows.Forms.Button btnSubtract;
     }
 }
 
