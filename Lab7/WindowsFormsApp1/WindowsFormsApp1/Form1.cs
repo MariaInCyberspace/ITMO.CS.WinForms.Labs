@@ -13,9 +13,40 @@ namespace WindowsFormsApp1
 {
     public partial class Form1 : Form
     {
+        private delegate void TimeConsumingMethodDelegate(int sec);
+        public delegate void SetProgressDelegate(int val);
+        bool Cancel;
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void TimeConsumingMethod(int sec)
+        {
+            for (int i = 1; i <= sec; i++)
+            {
+                if (Cancel) break;
+                System.Threading.Thread.Sleep(1000);
+                SetProgress((int)(i * 100) / sec);
+            }
+            if (Cancel)
+            {
+                MessageBox.Show("Operation cancelled.");
+            }
+            else MessageBox.Show("Completed.");
+        }
+
+        public void SetProgress(int val)
+        {
+            if (progressBar1.InvokeRequired)
+            {
+                SetProgressDelegate del = new SetProgressDelegate(SetProgress);
+                this.Invoke(del, new object[] { val });
+            }
+            else
+            {
+                progressBar1.Value = val;
+            }
         }
 
         private async Task<string> GoB()
@@ -69,6 +100,7 @@ namespace WindowsFormsApp1
         private async void button1_Click(object sender, EventArgs e)
         {
             int x;
+            TimeConsumingMethodDelegate tdel = new TimeConsumingMethodDelegate(TimeConsumingMethod);
             try
             {
                 x = int.Parse(textBox1.Text);
@@ -79,8 +111,15 @@ namespace WindowsFormsApp1
                 textBox1.Text = "";
                 return;
             }
+            tdel.BeginInvoke(int.Parse(textBox1.Text), null, null);
+
             string st = await GoB();
             richTextBox1.Text = st;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Cancel = true;
         }
     }
 }
